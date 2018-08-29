@@ -1,7 +1,7 @@
 @echo off
 
-::set fileName=JavaTest
-set /p fileName=Enter file name: 
+set fileName=Java000
+::set /p fileName=Enter file name: 
 set fileErrorName=%fileName: =%
 
 if not exist %fileErrorName% (
@@ -70,9 +70,6 @@ del %decJava%
 java %decName% %fileName% || set err=1
 del %decName%.class
 
-
-
-
 javac %fileName%.java || set err=1
 ::del %fileName%.java
 set /p unlock=< %fileName%
@@ -89,8 +86,5 @@ cls && echo This Program has one or more errors........
 echo PLEASE CONTACT .................. Admin: Angel T.
 )
 
-
-
 pause
 exit
-
